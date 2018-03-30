@@ -42,7 +42,7 @@ def tweet(status):
 def get_current_line(index):
 	with open("words.txt") as source_fh:
 		for i in range(index+1):
-			status_str = "fuck " + source_fh.readline().strip()
+			status_str = "duck " + source_fh.readline().strip()
 		return status_str
 
 class MainHandler(webapp2.RequestHandler):
@@ -104,7 +104,7 @@ class MakeHandler(webapp2.RequestHandler):
 
 class TestHandler(webapp2.RequestHandler):
 	def get(self):
-		tweet('fuck test')
+		tweet('duck test')
 
 		self.redirect('/')
 
